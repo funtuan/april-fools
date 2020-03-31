@@ -144,7 +144,7 @@ function temp(profile) {
                 "aspectMode": "cover",
                 "action": {
                 "type": "uri",
-                "uri": "https://funtuan.github.io/april-fools/"
+                "uri": "https://funtuan.github.io/april-fools/?openExternalBrowser=1"
                 }
             },
             "body": {
@@ -180,7 +180,7 @@ function temp(profile) {
                     "action": {
                     "type": "uri",
                     "label": "查看紅包狀態",
-                    "uri": "https://funtuan.github.io/april-fools/"
+                    "uri": "https://funtuan.github.io/april-fools/?openExternalBrowser=1"
                     },
                     "height": "sm"
                 }
