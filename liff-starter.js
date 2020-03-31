@@ -144,7 +144,7 @@ function temp(profile) {
                 "aspectMode": "cover",
                 "action": {
                 "type": "uri",
-                "uri": "http://linecorp.com/"
+                "uri": "https://funtuan.github.io/april-fools/"
                 }
             },
             "body": {
@@ -180,7 +180,7 @@ function temp(profile) {
                     "action": {
                     "type": "uri",
                     "label": "查看紅包狀態",
-                    "uri": "https://linecorp.com"
+                    "uri": "https://funtuan.github.io/april-fools/"
                     },
                     "height": "sm"
                 }
