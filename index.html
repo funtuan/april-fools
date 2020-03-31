@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="odometer.min.js"></script>
+    <link rel="stylesheet" href="odometer-theme-default.css" />
+    <title>紅包？</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="title">
+        這次搶到多少錢？
+      </div>
+      <div class="money">
+        NT$<span class="odometer"></span>
+      </div>
+      <div class="happy-text one">
+        這次抽到十萬元！
+      </div>
+      <div class="happy-text two">
+        記得轉給我😏
+      </div>
+      <div class="happy-text three">
+        愚人節快樂😁
+      </div>
+    </div>
+    <div id="share" class="share">
+      不能只有我被整<br>
+      傳遞LINE好友愚人節紅包
+    </div>
+  </body>
+  <script>
+    var el = document.querySelector('.odometer');
+    od = new Odometer({
+    el: el,
+    value: 999999,
+
+    // Any option (other than auto and selector) can be passed in here
+    format: 'd',
+    theme: 'default'
+    });
+    od.update(100000);
+
+    $(document).ready(function(){
+      setTimeout(function(){
+        $('.one').fadeIn(500);
+      }, 2000)
+      setTimeout(function(){
+        $('.two').fadeIn(500);
+      }, 3500)
+      setTimeout(function(){
+        $('.three').fadeIn(500);
+      }, 4000)
+      
+      setTimeout(function(){
+        $('.share').fadeIn(500);
+      }, 5000)
+    });
+  </script>
+  <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
+  <script src="liff-starter.js"></script>
+</html>
+
+<style>
+  @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+  html {
+    font-size: 11px;
+  }
+
+  body {
+    font-family: ‘Noto Sans TC’, sans-serif;
+    background-color: red;
+    color: white;
+    text-align: center;
+  }
+
+  .main {
+    margin-top: 30%;
+  }
+
+  .main .title {
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+
+  .main .money {
+    font-size: 3em;
+    font-weight: 700;
+  }
+
+  .main .happy-text {
+    display:none;
+    font-size: 2em;
+    margin-top: 20px;
+  }
+  
+  .share {
+    display:none;
+    border: #ffffff;
+    padding: 10px;
+    margin: 50px;
+    font-size: 1.5em;
+    line-height: 1.8;
+    border-style: solid;
+    border-radius: 10px;
+  }
+</style>
